@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | DevOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -99,7 +100,7 @@
         
         /* Hero Section */
         .hero {
-            height: calc(100vh - 80px);
+            min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
             position: relative;
@@ -124,6 +125,16 @@
             font-weight: 400;
             margin-bottom: 30px;
             opacity: 0.9;
+        }
+        
+        .hero ul {
+            margin-bottom: 30px;
+            list-style-position: inside;
+        }
+        
+        .hero ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
         
         .btn {
@@ -162,7 +173,7 @@
             right: 0;
             width: 50%;
             height: 100%;
-            background-image: url('/api/placeholder/800/600');
+            background-image: url('./images/WhatsApp\ Image\ 2025-05-01\ at\ 15.41.47\ \(1\).jpeg');
             background-size: cover;
             background-position: center;
             clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
@@ -217,6 +228,15 @@
         .about-text p {
             margin-bottom: 15px;
             font-size: 1.1rem;
+        }
+        
+        .about-text ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .about-text ul li {
+            margin-bottom: 10px;
         }
         
         /* Skills Section */
@@ -454,6 +474,7 @@
             align-items: center;
             justify-content: center;
             margin-right: 15px;
+            flex-shrink: 0;
         }
         
         .contact-form .form-group {
@@ -597,6 +618,10 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .hero-bg {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -613,7 +638,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="menu-toggle">
+                <button class="menu-toggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </nav>
@@ -625,17 +650,14 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Software | DevOps | Support Engineer & System Admin</h1>
-                <h2>Hello there!</h2>
-                <h2>I am <strong>Stephen Njuguna Njambi</strong></h2>
+                <h2>Hello there! I am <strong>Stephen Njuguna Njambi</strong></h2>
                 <ul>
-                <li><strong>Full Stack Software Engineer</strong></li>
-                <li><strong>DevOps Engineer</strong></li>
-                <li><strong>System Administrator</strong></li>
-                <li><strong>Support Engineer</strong></li>
-                <li><strong>Certified ISO Champion and Auditor</strong> <strong>ISO/IEC 27001:2022</strong></li>
-
+                    <li><strong>Full Stack Software Engineer</strong></li>
+                    <li><strong>DevOps Engineer</strong></li>
+                    <li><strong>System Administrator</strong></li>
+                    <li><strong>Support Engineer</strong></li>
+                    <li><strong>Certified ISO Champion and Auditor (ISO/IEC 27001:2022)</strong></li>
                 </ul>
-
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View Projects</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -652,19 +674,17 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Bridging Development and Operations</h3>
-                    <h2>Hello there!</h2>
                     <p>I am a <strong>Full Stack Software Engineer</strong> with extensive experience across various sectors of technology. My professional journey includes:</p>
                     <ul>
-                      <li><strong>DevOps Engineer</strong> – managing CI/CD pipelines, automation, and infrastructure as code</li>
-                      <li><strong>System Administrator</strong> – ensuring system reliability, security, and performance</li>
-                      <li><strong>Support Engineer</strong> – providing technical assistance and resolving complex issues</li>
-                      <li><strong>Certified ISO Champion and Auditor</strong> – actively involved in implementing <strong>ISO/IEC 27001:2022</strong> standards across the organization</li>
+                        <li><strong>DevOps Engineer</strong> – managing CI/CD pipelines, automation, and infrastructure as code</li>
+                        <li><strong>System Administrator</strong> – ensuring system reliability, security, and performance</li>
+                        <li><strong>Support Engineer</strong> – providing technical assistance and resolving complex issues</li>
+                        <li><strong>Certified ISO Champion and Auditor</strong> – actively involved in implementing <strong>ISO/IEC 27001:2022</strong> standards across the organization</li>
                     </ul>
-                    
                     <a href="#contact" class="btn">Let's Connect</a>
                 </div>
                 <div class="about-image">
-                    <img src="/api/placeholder/600/400" alt="Profile Picture">
+                    <img src="./images/WhatsApp Image 2025-05-01 at 15.41.47 (1).jpeg" alt="Stephen Njuguna Njambi Profile Picture">
                 </div>
             </div>
         </div>
@@ -681,7 +701,7 @@
                     </div>
                     <h3 class="skill-title">Cloud Platforms</h3>
                     <ul class="skill-list">
-                        <li>Znuny </li>
+                        <li>Znuny</li>
                         <li>Google Cloud Platform</li>
                         <li>Microsoft Azure</li>
                         <li>Digital Ocean</li>
@@ -712,7 +732,7 @@
                     <div class="skill-icon">
                         <i class="fas fa-link"></i>
                     </div>
-                    <h3 class="skill-title">Programming </h3>
+                    <h3 class="skill-title">Programming</h3>
                     <ul class="skill-list">
                         <li>React & Ruby</li>
                         <li>Linux</li>
@@ -720,7 +740,6 @@
                         <li>Perl</li>
                     </ul>
                 </div>
-              
             </div>
         </div>
     </section>
@@ -731,7 +750,7 @@
             <h2 class="section-title">Projects & Case Studies</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('/api/placeholder/400/200')"></div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
                     <div class="project-content">
                         <h3 class="project-title">Microservices Platform Migration</h3>
                         <p class="project-description">Led the migration of a monolithic application to microservices architecture, implementing containerization and Kubernetes orchestration.</p>
@@ -747,7 +766,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('/api/placeholder/400/200')"></div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
                     <div class="project-content">
                         <h3 class="project-title">Multi-Cloud DR Solution</h3>
                         <p class="project-description">Designed and implemented a multi-cloud disaster recovery solution with automated failover capabilities and minimal downtime.</p>
@@ -765,7 +784,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('/api/placeholder/400/200')"></div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
                     <div class="project-content">
                         <h3 class="project-title">GitOps Deployment Pipeline</h3>
                         <p class="project-description">Created a GitOps-based deployment pipeline that automated the entire software delivery process from commit to production.</p>
@@ -783,7 +802,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('/api/placeholder/400/200')"></div>
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
                     <div class="project-content">
                         <h3 class="project-title">Self-Healing Infrastructure Platform</h3>
                         <p class="project-description">Built an automated infrastructure platform with self-healing capabilities, reducing incident response time by 80%.</p>
@@ -853,8 +872,10 @@
                 <ul class="contact-info">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>stevenjugushh@gmail.com</span>
-                        <span>njamba.dev@gmail.com</span>
+                        <div>
+                            <span>stevenjugushh@gmail.com</span><br>
+                            <span>njamba.dev@gmail.com</span>
+                        </div>
                     </li>
                     <li>
                         <i class="fas fa-phone"></i>
@@ -862,18 +883,79 @@
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>San Francisco, CA</span>
+                        <span>Nairobi, Kenya</span>
                     </li>
                     <li>
                         <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/yourname</span>
+                        <span>Stephen Njuguna</span>
                     </li>
                     <li>
                         <i class="fab fa-github"></i>
-                        <span>
-                        </span>
+                        <span>Njambadev</span>
                     </li>
                 </ul>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/stephen-njuguna-9b98841b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Njambaddev" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">© 2023 Stephen Njuguna Njambi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
